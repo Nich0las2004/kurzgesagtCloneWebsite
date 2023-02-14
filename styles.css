@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.all{
+    height:100%;
+    width:100%;
+}
+nav{
+    background-color: rgb(17, 17, 67);
+    position:sticky;
+    top: 0;
+}
+
+.nav-bar{
+    display:flex;
+    height: 9vh;
+    justify-content: start;
+    align-items:center;
+    padding-left: 2rem;
+}
+
+nav ul li{
+    list-style-type: none;
+    font-size:1.3rem;
+    padding:10px;   
+}
+a{
+    color:rgb(235, 235, 235);
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    background: black;
+    height: 100vh;
+}
+h1{
+    color:white;
+    text-align: center;
+    font-family:sans-serif;
+    padding-top:5vh;
+    letter-spacing: 3px;
+    font-size:35px;
+}
+
+footer{
+    height: 9vh;
+    background-color: rgb(17, 17, 67);
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+li{
+    padding:10px;  
+}
+li:hover{
+    text-decoration: underline;
+}
+
+.footer1 {
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    padding-left: 2vw;
+    font-size:1.2rem;
+    font-weight: 300;
+}
+
+.icons{
+    display:flex;
+    list-style-type: none;
+    font-size:2rem;
+    cursor:pointer;
+    padding-left: 47vw;
+}
+
+.icons li a {
+    color: #1a51a3;
+}
+
+::-webkit-scrollbar{
+    width: .8em;
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background:grey;
+    border-radius: 10vw;
+}
+p{
+    padding-left:50%;
+    padding-top:calc((91vh)/2);
+}
+
+/*
+This is a test ring
+*/
+
+
+.loader{
+    position: relative;
+    margin-top: 30vh;
+    margin-left:45%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    animation: animate 2s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%{
+      transform: rotate(0deg);
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .loader::before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+  .loader::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    border-radius: 50%;
+    z-index: 1000;
+    z-index: 1;
+    filter: blur(30px);
+  }
